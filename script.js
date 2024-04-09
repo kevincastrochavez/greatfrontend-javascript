@@ -25,10 +25,12 @@
  * @returns {number} Returns the clamped number.
  */
 export default function clamp(value, lower, upper) {
-  const valueInLowerBound = value < lower;
-  const valueInUpperBound = value > upper;
+  //   const valueInLowerBound = value < lower;
+  //   const valueInUpperBound = value > upper;
 
-  if (valueInLowerBound) return lower;
-  if (valueInUpperBound) return upper;
-  return lower;
+  //   if (valueInLowerBound) return lower;
+  //   if (valueInUpperBound) return upper;
+  //   return lower;
+
+  return Math.min(upper, Math.max(lower, value));
 }
