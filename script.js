@@ -24,4 +24,11 @@
  * @param {number} upper The upper bound.
  * @returns {number} Returns the clamped number.
  */
-export default function clamp(value, lower, upper) {}
+export default function clamp(value, lower, upper) {
+  const valueInLowerBound = value < lower;
+  const valueInUpperBound = value > upper;
+
+  if (valueInLowerBound) return lower;
+  if (valueInUpperBound) return upper;
+  return lower;
+}
