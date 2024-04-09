@@ -14,7 +14,9 @@
  * @param {Function} fn
  * @return {number}
  */
-function functionLength(fn) {}
+function functionLength(fn) {
+  return fn.length;
+}
 
 function foo() {}
 function bar(a) {}
