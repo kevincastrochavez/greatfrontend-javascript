@@ -15,7 +15,10 @@
 function intersection(...arrays) {
   if (arrays.length === 0) return [];
   return arrays.reduce(
-    (acc, arr) => acc.filter((value) => arr.includes(value)),
+    (acc, arr) =>
+      Array.from(new Set(acc)).filter((value) =>
+        Array.from(new Set(arr)).includes(value)
+      ),
     arrays[0]
   );
 }
